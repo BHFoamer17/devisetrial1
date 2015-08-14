@@ -1,4 +1,38 @@
 Rails.application.routes.draw do
+  # Routes for the Service_provider resource:
+  # CREATE
+  get "/service_providers/new", :controller => "service_providers", :action => "new"
+  post "/create_service_provider", :controller => "service_providers", :action => "create"
+
+  # READ
+  get "/service_providers", :controller => "service_providers", :action => "index"
+  get "/service_providers/:id", :controller => "service_providers", :action => "show"
+
+  # UPDATE
+  get "/service_providers/:id/edit", :controller => "service_providers", :action => "edit"
+  post "/update_service_provider/:id", :controller => "service_providers", :action => "update"
+
+  # DELETE
+  get "/delete_service_provider/:id", :controller => "service_providers", :action => "destroy"
+  #------------------------------
+
+  # Routes for the Customer resource:
+  # CREATE
+  get "/customers/new", :controller => "customers", :action => "new"
+  post "/create_customer", :controller => "customers", :action => "create"
+
+  # READ
+  get "/customers", :controller => "customers", :action => "index"
+  get "/customers/:id", :controller => "customers", :action => "show"
+
+  # UPDATE
+  get "/customers/:id/edit", :controller => "customers", :action => "edit"
+  post "/update_customer/:id", :controller => "customers", :action => "update"
+
+  # DELETE
+  get "/delete_customer/:id", :controller => "customers", :action => "destroy"
+  #------------------------------
+
   # Routes for the Review resource:
   # CREATE
   get "/reviews/new", :controller => "reviews", :action => "new"
